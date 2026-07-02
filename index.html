@@ -3,229 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPGSV EXIM | Global Perishable Sourcing & Merchant Trade</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>LPGSV EXIM | Global Sourcing & Agro-Marine Trade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* CORE RESET & TYPOGRAPHY */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: #0a0a0a; color: #f5f5f5; font-family: 'Urbanist', sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
-        h1, h2, h3, .nav-logo { font-family: 'Poppins', sans-serif; color: #f5f5f5; }
-        p { color: #daffde; opacity: 0.85; line-height: 1.6; font-size: 17px; }
+        body { background-color: #0a0a0a; color: #f5f5f5; font-family: 'Urbanist', sans-serif; }
+        .hero { min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1544474747-d0d524792672?q=80&w=1600&auto=format&fit=crop'); background-size: cover; padding: 50px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #141414; padding: 30px; border-radius: 16px; border: 1px solid #333; }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
+        h1 { font-family: 'Poppins', sans-serif; font-size: 48px; color: #fff; margin-bottom: 20px; }
         span { color: #deff9a; }
-
-        /* NAVIGATION BAR */
-        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(222, 255, 154, 0.1); z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 24px; font-weight: 700; letter-spacing: 1px; cursor: pointer; text-decoration: none; }
-        .nav-links { list-style: none; display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: #f5f5f5; font-weight: 500; font-size: 16px; transition: color 0.3s; cursor: pointer; padding: 5px 10px; border-radius: 4px; }
-        .nav-links a:hover, .nav-links a.active { color: #deff9a; background: rgba(222, 255, 154, 0.05); }
-
-        /* MULTI-PAGE VIEW MANAGER */
-        .page-section { display: none; padding: 120px 20px 80px 20px; max-width: 1200px; margin: 0 auto; flex-grow: 1; width: 100%; }
-        .page-section.active-page { display: block; animation: fadeIn 0.4s ease-in-out; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* HERO SECTION (ISOLATED HOME VIEW) */
-        .hero-section { display: none; min-height: 100vh; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 100px 20px; position: relative; width: 100%; flex-grow: 1; }
-        .hero-section.active-page { display: flex; }
-        .hero-content { max-width: 850px; padding: 20px; }
-        .hero h1 { font-size: 56px; font-weight: 700; margin-bottom: 20px; line-height: 1.1; }
-        .hero p { font-size: 20px; margin-bottom: 40px; }
-        
-        .cta-btn { display: inline-block; background-color: #deff9a; color: #0a0a0a; padding: 15px 35px; border-radius: 30px; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; border: none; }
-        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(222, 255, 154, 0.2); }
-
-        /* HEADER DESIGNS FOR INTERNAL PAGES */
-        .page-header { font-size: 36px; font-weight: 600; margin-bottom: 40px; border-left: 5px solid #deff9a; padding-left: 20px; }
-
-        /* PRODUCTS GRID */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
-        .card { background: #141414; border: 1px solid rgba(222, 255, 154, 0.05); padding: 30px; border-radius: 16px; transition: border 0.3s; }
-        .card:hover { border-color: rgba(222, 255, 154, 0.3); }
-        
-        .card-img { height: 200px; width: 100%; overflow: hidden; border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(222, 255, 154, 0.1); }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; }
-
-        .card h3 { font-size: 22px; color: #deff9a; margin-bottom: 15px; }
-        .hsn-badge { display: inline-block; background: rgba(222, 255, 154, 0.1); color: #deff9a; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; }
-
-        /* SUPPLY CHAIN */
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .image-container { width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid rgba(222, 255, 154, 0.25); aspect-ratio: 4/3; }
-        .two-col img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .features-list { list-style: none; margin-top: 25px; }
-        .features-list li { margin-bottom: 15px; display: flex; align-items: flex-start; font-size: 17px; color: #daffde; }
-        .features-list i { color: #deff9a; margin-right: 15px; margin-top: 5px; }
-
-        /* CONTACT FORM */
-        .contact-box { background: #141414; border: 1px solid rgba(222, 255, 154, 0.1); padding: 50px; border-radius: 24px; max-width: 700px; margin: 0 auto; }
-        .form-group { margin-bottom: 25px; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #deff9a; }
-        .form-group input, .form-group textarea { width: 100%; background: #0a0a0a; border: 1px solid rgba(222, 255, 154, 0.2); border-radius: 8px; padding: 14px; color: #f5f5f5; font-size: 16px; font-family: inherit; }
-        .form-group input:focus, .form-group textarea:focus { border-color: #deff9a; outline: none; }
-        .submit-btn { width: 100%; background: #deff9a; color: #0a0a0a; border: none; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: opacity 0.3s; }
-        .submit-btn:hover { opacity: 0.9; }
-
-        /* FOOTER */
-        footer { background: #050505; text-align: center; padding: 40px 20px; border-top: 1px solid rgba(222, 255, 154, 0.05); margin-top: auto; }
-        footer p { font-size: 14px; opacity: 0.5; }
-
-        /* RESPONSIVE LAYOUTS */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 38px; }
-            .two-col { grid-template-columns: 1fr; gap: 40px; }
-            .contact-box { padding: 30px; }
-        }
+        .nav { padding: 20px; text-align: center; border-bottom: 1px solid #333; }
+        .nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
-
-    <!-- NAVIGATION HEADER -->
-    <header>
-        <div class="nav-container">
-            <a onclick="navigateTo('hero')" class="nav-logo">LPGSV<span>EXIM</span></a>
-            <ul class="nav-links">
-                <li><a id="nav-hero" onclick="navigateTo('hero')" class="active">Home</a></li>
-                <li><a id="nav-products" onclick="navigateTo('products')">Product Lines</a></li>
-                <li><a id="nav-supplychain" onclick="navigateTo('supplychain')">Cold Chain</a></li>
-                <li><a id="nav-contact" onclick="navigateTo('contact')">Contact Desk</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- 1. HOME BANNER (ACTIVE BY DEFAULT) -->
-    <section class="hero-section active-page" id="hero">
-        <div class="hero-content hero">
-            <h1>Global Sourcing & Agro-Marine Trade <span>Premium Indian Exports</span> Delivered Fresh</h1>
-            <p>Gujarat's premier merchant export partner bridging international supply chains with India's richest agricultural zones. We export premium Floriculture, Fresh Horticulture, and premium Aquaculture under strict temperature thresholds.</p>
-            <button onclick="navigateTo('contact')" class="cta-btn">Partner with LPGSV EXIM</button>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#products">Product Lines</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <section class="hero" id="home">
+        <div>
+            <h1>Global Sourcing & Agro-Marine Trade<br><span>Premium Indian Exports Delivered Fresh</span></h1>
+            <p>Premier Indian Merchant Exporter bridging international markets with top-tier agriculture.</p>
         </div>
     </section>
-
-    <!-- 2. PRODUCT LINES PROFILE -->
-    <section class="page-section" id="products">
-        <h2 class="page-header">Verified Export Product Portfolio</h2>
+    <div class="container" id="products">
+        <h2 style="margin-bottom: 30px;">Verified Export Product Portfolio</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1597290282695-edc22d0d3810?auto=format&fit=crop&w=800&q=80" 
-                         onerror="this.src='https://images.unsplash.com/photo-1582794543139-8bac96f372a9?auto=format&fit=crop&w=800&q=80'" 
-                         alt="Premium Floriculture">
-                </div>
-                <span class="hsn-badge">HSN 0603.11 / .12</span>
+                <img src="https://images.unsplash.com/photo-1582794543139-8bac96f372a9?q=80&w=800&auto=format&fit=crop" alt="Floriculture">
                 <h3>Premium Floriculture</h3>
-                <p>Fresh-cut luxury stems, including structural commercial grade Roses and Carnations, sorted and packaged dynamically for international flower auctions and volume distributors.</p>
+                <p>Bulk export of fresh cut stems for global auctions.</p>
             </div>
             <div class="card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Perishable Horticulture"></div>
-                <span class="hsn-badge">HSN 0709.99 / 0804.50</span>
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop" alt="Horticulture">
                 <h3>Perishable Horticulture</h3>
-                <p>Highly delicate fresh fruits and ethnic green vegetables, featuring export-grade Okra, Green Chillies, and premium Kesar Mangoes meticulously filtered for optimal chemical MRL compliance.</p>
+                <p>Ethnic Indian vegetables and premium seasonal fruits.</p>
             </div>
             <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1625944230916-749e7826359f?auto=format&fit=crop&w=800&q=80" 
-                         onerror="this.src='https://images.unsplash.com/photo-1544220599-46369c768a2d?auto=format&fit=crop&w=800&q=80'" 
-                         alt="Aquaculture">
-                </div>
-                <span class="hsn-badge">HSN 0306.36 / 0302.89</span>
+                <img src="https://images.unsplash.com/photo-1544220599-46369c768a2d?q=80&w=800&auto=format&fit=crop" alt="Aquaculture">
                 <h3>Inland & Marine Aquaculture</h3>
-                <p>Fresh, unprocessed catch and premium inland aquaculture including chilled Shrimps, Prawns, and native catch kept systematically at deep freezing point thresholds right from the dock.</p>
+                <p>Export-grade chilled Shrimps and fresh-water catch.</p>
             </div>
         </div>
-    </section>
-
-    <!-- 3. SUPPLY CHAIN PROTOCOLS -->
-    <section class="page-section" id="supplychain">
-        <h2 class="page-header">Cold Chain Infrastructure & Sourcing</h2>
-        <div class="two-col">
-            <div>
-                <p>We operate as a high-precision logistical bridge across Western India's industrial corridors. Rather than holding depreciating assets, we secure premium 3PL reefer capacity and dedicated slots across state-certified packing infrastructure.</p>
-                <ul class="features-list">
-                    <li><i class="fa-solid fa-circle-check"></i><div><strong>Immediate Post-Harvest Pre-Cooling:</strong> Rapid stripping of structural field heat at farm level to cease decay vectors immediately.</div></li>
-                    <li><i class="fa-solid fa-circle-check"></i><div><strong>Continuous USB Data Logging:</strong> Real-time temperature logs captured at precise 10-minute intervals to maintain data transparency.</div></li>
-                    <li><i class="fa-solid fa-circle-check"></i><div><strong>Absolute Compliance Alignment:</strong> Registered directly with <strong>APEDA</strong> and <strong>MPEDA</strong>, mapping out clean customs routing through Mundra and Mumbai.</div></li>
-                </ul>
-            </div>
-            <div class="image-container">
-                <!-- Premium High-Quality Cold Storage / Reefer Cargo Image Link with Secure Fallback Link -->
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80" 
-                     onerror="this.src='https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80'" 
-                     alt="Cold Chain Cargo Shipping Terminals and Infrastructure Logistics">
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. INTERACTIVE CONTACT EXIM DESK -->
-    <section class="page-section" id="contact">
-        <h2 class="page-header" style="text-align: center; border-left: none; padding-left: 0;">Global Procurement Desk</h2>
-        <div class="contact-box">
-            <form onsubmit="event.preventDefault(); alert('Trade inquiry logged. LPGSV EXIM desk will route technical specs within 12 business hours.');">
-                <div class="form-group">
-                    <label>Enterprise Entity Name</label>
-                    <input type="text" placeholder="e.g., Lulu Group International" required>
-                </div>
-                <div class="form-group">
-                    <label>Official Corporate Email Address</label>
-                    <input type="email" placeholder="e.g., procurement.fresh@company.com" required>
-                </div>
-                <div class="form-group">
-                    <label>Target Country/Port of Arrival</label>
-                    <input type="text" placeholder="e.g., Port of Jebel Ali, Dubai (UAE)" required>
-                </div>
-                <div class="form-group">
-                    <label>Logistics Sourcing Requirements & Target Tonnages</label>
-                    <textarea rows="5" placeholder="Specify targeted HSN codes, container specifications, or frequency of shipment allotments..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Transmit Letter of Intent (LOI)</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 LPGSV EXIM. Structural Merchant Bridge. Vadodara Office Corridor, Gujarat, India. All Rights Reserved.</p>
-    </footer>
-
-    <!-- VIEW TRANSITION SCRIPT -->
-    <script>
-        function navigateTo(pageId) {
-            // Remove active classes from all pages
-            document.querySelectorAll('.hero-section, .page-section').forEach(element => {
-                element.classList.remove('active-page');
-            });
-
-            // Remove active classes from all navigation links
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-            });
-
-            // Activate chosen target page
-            const activePage = document.getElementById(pageId);
-            if (activePage) {
-                activePage.classList.add('active-page');
-            }
-
-            // Highlight chosen navigation link
-            const activeLink = document.getElementById('nav-' + pageId);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-
-            // Scroll cleanly back to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
+    </div>
 </body>
 </html>
- 
