@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPGSV EXIM | Global Perishable Logistics & Agro Sourcing</title>
+    <title>LPGSV EXIM | Global Perishable Sourcing & Merchant Trade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <style>
+        /* CORE RESET & TYPOGRAPHY */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { background-color: #0a0a0a; color: #f5f5f5; font-family: 'Urbanist', sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
         h1, h2, h3, .nav-logo { font-family: 'Poppins', sans-serif; color: #f5f5f5; }
         p { color: #daffde; opacity: 0.85; line-height: 1.6; font-size: 17px; }
         span { color: #deff9a; }
 
+        /* NAVIGATION BAR */
         header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(222, 255, 154, 0.1); z-index: 1000; }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { font-size: 24px; font-weight: 700; letter-spacing: 1px; cursor: pointer; text-decoration: none; }
@@ -23,6 +24,7 @@
         .nav-links a { text-decoration: none; color: #f5f5f5; font-weight: 500; font-size: 16px; transition: color 0.3s; cursor: pointer; padding: 5px 10px; border-radius: 4px; }
         .nav-links a:hover, .nav-links a.active { color: #deff9a; background: rgba(222, 255, 154, 0.05); }
 
+        /* MULTI-PAGE VIEW MANAGER */
         .page-section { display: none; padding: 120px 20px 80px 20px; max-width: 1200px; margin: 0 auto; flex-grow: 1; width: 100%; }
         .page-section.active-page { display: block; animation: fadeIn 0.4s ease-in-out; }
 
@@ -31,6 +33,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* HERO SECTION (ISOLATED HOME VIEW) */
         .hero-section { display: none; min-height: 100vh; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 100px 20px; position: relative; width: 100%; flex-grow: 1; }
         .hero-section.active-page { display: flex; }
         .hero-content { max-width: 850px; padding: 20px; }
@@ -40,14 +43,17 @@
         .cta-btn { display: inline-block; background-color: #deff9a; color: #0a0a0a; padding: 15px 35px; border-radius: 30px; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; border: none; }
         .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(222, 255, 154, 0.2); }
 
+        /* HEADER DESIGNS FOR INTERNAL PAGES */
         .page-header { font-size: 36px; font-weight: 600; margin-bottom: 40px; border-left: 5px solid #deff9a; padding-left: 20px; }
 
+        /* PRODUCTS GRID */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
         .card { background: #141414; border: 1px solid rgba(222, 255, 154, 0.05); padding: 30px; border-radius: 16px; transition: border 0.3s; }
         .card:hover { border-color: rgba(222, 255, 154, 0.3); }
         .card h3 { font-size: 22px; color: #deff9a; margin-bottom: 15px; }
         .hsn-badge { display: inline-block; background: rgba(222, 255, 154, 0.1); color: #deff9a; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; }
 
+        /* SUPPLY CHAIN */
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .image-container { width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid rgba(222, 255, 154, 0.25); aspect-ratio: 4/3; }
         .two-col img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -55,6 +61,7 @@
         .features-list li { margin-bottom: 15px; display: flex; align-items: flex-start; font-size: 17px; color: #daffde; }
         .features-list i { color: #deff9a; margin-right: 15px; margin-top: 5px; }
 
+        /* CONTACT FORM */
         .contact-box { background: #141414; border: 1px solid rgba(222, 255, 154, 0.1); padding: 50px; border-radius: 24px; max-width: 700px; margin: 0 auto; }
         .form-group { margin-bottom: 25px; }
         .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #deff9a; }
@@ -63,9 +70,11 @@
         .submit-btn { width: 100%; background: #deff9a; color: #0a0a0a; border: none; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: opacity 0.3s; }
         .submit-btn:hover { opacity: 0.9; }
 
+        /* FOOTER */
         footer { background: #050505; text-align: center; padding: 40px 20px; border-top: 1px solid rgba(222, 255, 154, 0.05); margin-top: auto; }
         footer p { font-size: 14px; opacity: 0.5; }
 
+        /* RESPONSIVE LAYOUTS */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 38px; }
@@ -76,6 +85,7 @@
 </head>
 <body>
 
+    <!-- NAVIGATION HEADER -->
     <header>
         <div class="nav-container">
             <a onclick="navigateTo('hero')" class="nav-logo">LPGSV<span>EXIM</span></a>
@@ -88,14 +98,16 @@
         </div>
     </header>
 
+    <!-- 1. HOME BANNER (ACTIVE BY DEFAULT) -->
     <section class="hero-section active-page" id="hero">
         <div class="hero-content hero">
-            <h1>Unbroken <span>Cold Chain Solutions</span> From Farm to Global Terminal</h1>
-            <p>Gujarat's premier merchant export architecture routing high-grade Floriculture, Fresh Horticulture, and premium Aquaculture directly into key international trade hubs.</p>
-            <button onclick="navigateTo('contact')" class="cta-btn">Initiate Procurement Trade</button>
+            <h1>Global Sourcing & Agro-Marine Trade <span>Premium Indian Exports</span> Delivered Fresh</h1>
+            <p>Gujarat's premier merchant export partner bridging international supply chains with India's richest agricultural zones. We export premium Floriculture, Fresh Horticulture, and premium Aquaculture under strict temperature thresholds.</p>
+            <button onclick="navigateTo('contact')" class="cta-btn">Partner with LPGSV EXIM</button>
         </div>
     </section>
 
+    <!-- 2. PRODUCT LINES PROFILE -->
     <section class="page-section" id="products">
         <h2 class="page-header">Verified Export Product Portfolio</h2>
         <div class="grid">
@@ -117,6 +129,7 @@
         </div>
     </section>
 
+    <!-- 3. SUPPLY CHAIN PROTOCOLS -->
     <section class="page-section" id="supplychain">
         <h2 class="page-header">Cold Chain Infrastructure & Sourcing</h2>
         <div class="two-col">
@@ -137,6 +150,7 @@
         </div>
     </section>
 
+    <!-- 4. INTERACTIVE CONTACT EXIM DESK -->
     <section class="page-section" id="contact">
         <h2 class="page-header" style="text-align: center; border-left: none; padding-left: 0;">Global Procurement Desk</h2>
         <div class="contact-box">
@@ -162,10 +176,12 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 LPGSV EXIM. Structural Merchant Bridge. Vadodara Office Corridor, Gujarat, India. All Rights Reserved.</p>
     </footer>
 
+    <!-- VIEW TRANSITION SCRIPT -->
     <script>
         function navigateTo(pageId) {
             // Remove active classes from all pages
