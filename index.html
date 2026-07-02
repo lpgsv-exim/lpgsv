@@ -50,6 +50,10 @@
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
         .card { background: #141414; border: 1px solid rgba(222, 255, 154, 0.05); padding: 30px; border-radius: 16px; transition: border 0.3s; }
         .card:hover { border-color: rgba(222, 255, 154, 0.3); }
+        
+        .card-img { height: 200px; width: 100%; overflow: hidden; border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(222, 255, 154, 0.1); }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; }
+
         .card h3 { font-size: 22px; color: #deff9a; margin-bottom: 15px; }
         .hsn-badge { display: inline-block; background: rgba(222, 255, 154, 0.1); color: #deff9a; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; }
 
@@ -112,16 +116,19 @@
         <h2 class="page-header">Verified Export Product Portfolio</h2>
         <div class="grid">
             <div class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1597290282695-edc22d0d3810?auto=format&fit=crop&w=800&q=80" alt="Premium Floriculture"></div>
                 <span class="hsn-badge">HSN 0603.11 / .12</span>
                 <h3>Premium Floriculture</h3>
                 <p>Fresh-cut luxury stems, including structural commercial grade Roses and Carnations, sorted and packaged dynamically for international flower auctions and volume distributors.</p>
             </div>
             <div class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Perishable Horticulture"></div>
                 <span class="hsn-badge">HSN 0709.99 / 0804.50</span>
                 <h3>Perishable Horticulture</h3>
                 <p>Highly delicate fresh fruits and ethnic green vegetables, featuring export-grade Okra, Green Chillies, and premium Kesar Mangoes meticulously filtered for optimal chemical MRL compliance.</p>
             </div>
             <div class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1625944230916-749e7826359f?auto=format&fit=crop&w=800&q=80" alt="Aquaculture"></div>
                 <span class="hsn-badge">HSN 0306.36 / 0302.89</span>
                 <h3>Inland & Marine Aquaculture</h3>
                 <p>Fresh, unprocessed catch and premium inland aquaculture including chilled Shrimps, Prawns, and native catch kept systematically at deep freezing point thresholds right from the dock.</p>
