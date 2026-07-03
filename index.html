@@ -77,11 +77,13 @@
             <h2 class="text-3xl font-bold mb-8 text-blue-900">How We Operate</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow-sm border">
-                    <img src="https://images.unsplash.com/photo-1595353503198-ec3798959fcf?auto=format&fit=crop&q=80&w=800" alt="Farmer Collaboration" class="mb-6 rounded-lg w-full h-48 object-cover">
+                    <!-- Updated Image to show movement of goods/logistics -->
+                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800" alt="Movement of Goods" class="mb-6 rounded-lg w-full h-48 object-cover">
                     <h4 class="font-bold text-xl text-blue-900 mb-4 underline">FPO Partnerships</h4>
                     <p class="text-slate-600 leading-relaxed">We partner with local Farmer Producer Organizations (FPOs) across Gujarat and Maharashtra. By working directly at the source, we ensure our farmers follow precise guidelines on pesticide usage to comply with international Maximum Residue Limits (MRLs).</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <!-- Updated Image to show Cold Chain Warehouse -->
                     <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Cold Chain Warehouse" class="mb-6 rounded-lg w-full h-48 object-cover">
                     <h4 class="font-bold text-xl text-blue-900 mb-4 underline">Preservation Framework</h4>
                     <p class="text-slate-600 leading-relaxed">Our cold-chain management guarantees 100% shelf-life integrity from farm to foreign customs. We implement technical packhouse cooling immediately post-harvest to ensure premium quality upon arrival.</p>
@@ -114,13 +116,20 @@
                 <div class="bg-white p-8 rounded-xl shadow-sm border">
                     <h3 class="font-bold text-xl text-blue-900 mb-4">Submit Your Enquiry</h3>
                     <form action="https://formsubmit.co/sndplal@gmail.com" method="POST" class="space-y-4">
-                        <!-- Configuration fields for FormSubmit -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://lpgsv-exim.github.io/lpgsv/">
                         
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Company Name</label>
                             <input type="text" name="Company Name" required class="w-full p-2 border rounded border-slate-300">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700">Email Address</label>
+                            <input type="email" name="Email" required class="w-full p-2 border rounded border-slate-300">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700">Phone Number</label>
+                            <input type="tel" name="Phone Number" required class="w-full p-2 border rounded border-slate-300">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Product Interest</label>
