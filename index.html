@@ -5,174 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPGSV EXIM | Global Agro-Marine Export Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .corporate-navy { background-color: #1a2a6c; }
-        .corporate-text { color: #1a2a6c; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-slate-900">
 
-    <header class="bg-white border-b-4 border-blue-900 shadow-md p-6">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <h1 class="text-3xl font-bold tracking-tight text-blue-900 uppercase">LPGSV EXIM</h1>
-                <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Global Agro-Marine Export Excellence</p>
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight text-blue-900 uppercase">LPGSV <span class="text-blue-600">EXIM</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-blue-900">About</a>
+                <a href="#services" class="hover:text-blue-900">Solutions</a>
+                <a href="#logistics" class="hover:text-blue-900">Logistics</a>
+                <a href="#contact" class="px-5 py-2 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition">Contact</a>
             </div>
-            <nav class="flex space-x-4">
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded border">APEDA Reg.</span>
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded border">MPEDA Reg.</span>
-            </nav>
+        </div>
+    </nav>
+
+    <header class="relative h-[600px] flex items-center justify-center text-white">
+        <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=2000" alt="Global logistics" class="absolute inset-0 w-full h-full object-cover brightness-50">
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Global Agro-Marine Export Excellence.</h1>
+            <p class="text-xl md:text-2xl font-light mb-10 text-gray-200">Bridge connecting India's rich agrarian produce to discerning international markets with precision and integrity.</p>
+            <a href="#services" class="px-8 py-4 bg-blue-600 text-white font-semibold rounded shadow-lg hover:bg-blue-500 transition uppercase tracking-wider text-sm">Explore Solutions</a>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto py-10 px-4">
-        
-        <!-- Tab Navigation -->
-        <div class="flex flex-wrap gap-2 mb-8 border-b pb-4">
-            <button onclick="showTab('about')" class="tab-btn px-6 py-3 font-bold text-sm uppercase transition hover:text-blue-900 border-b-2 border-transparent">About Us</button>
-            <button onclick="showTab('products')" class="tab-btn px-6 py-3 font-bold text-sm uppercase transition hover:text-blue-900 border-b-2 border-transparent">Products</button>
-            <button onclick="showTab('logistics')" class="tab-btn px-6 py-3 font-bold text-sm uppercase transition hover:text-blue-900 border-b-2 border-transparent">Logistics</button>
-            <button onclick="showTab('operations')" class="tab-btn px-6 py-3 font-bold text-sm uppercase transition hover:text-blue-900 border-b-2 border-transparent">How We Operate</button>
-            <button onclick="showTab('payments')" class="tab-btn px-6 py-3 font-bold text-sm uppercase transition hover:text-blue-900 border-b-2 border-transparent">Payments</button>
-            <button onclick="showTab('contact')" class="tab-btn px-6 py-3 font-bold text-sm uppercase transition hover:text-blue-900 border-b-2 border-transparent">Contact</button>
-        </div>
-
-        <!-- Content Area -->
-        <div id="content" class="bg-white p-8 md:p-12 shadow-sm border rounded-lg min-h-[400px]">
-            
-            <!-- About -->
-            <div id="about" class="tab-content active">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">About LPGSV EXIM</h2>
-                <p class="mb-6 leading-relaxed">LPGSV EXIM serves as a premier merchant bridge connecting the rich agrarian produce of India with discerning international markets. We are specialized in the end-to-end management of perishable exports.</p>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-gray-50 p-6 rounded">
-                        <h4 class="font-bold mb-2">Compliance & Certifications</h4>
-                        <ul class="text-sm space-y-2">
-                            <li>✓ Registered APEDA & MPEDA Exporter</li>
-                            <li>✓ FSSAI Export Licensed</li>
-                            <li>✓ HACCP & EIA Certified Marine Facilities</li>
-                            <li>✓ Phytosanitary Compliance Standards</li>
-                        </ul>
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <section id="services" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-900 underline-offset-8">Core Business Segments</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group overflow-hidden rounded shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1596567262660-c3d3a06c5476?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-8 bg-white">
+                        <h3 class="text-xl font-bold mb-3">Horticulture</h3>
+                        <p class="text-slate-600">Premium cut flowers and seasonal fresh fruits (Mangoes/Citrus) sourced for freshness and longevity.</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded">
-                        <h4 class="font-bold mb-2">Market Reach</h4>
-                        <p class="text-sm text-gray-600">We leverage strong trade relationships in the <strong>UAE, United Kingdom, Netherlands (European Hub), and the US</strong>, ensuring consistent supply chain reliability.</p>
+                </div>
+                <div class="group overflow-hidden rounded shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1583258298642-f8c5c7d0d04c?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-8 bg-white">
+                        <h3 class="text-xl font-bold mb-3">Marine Commodities</h3>
+                        <p class="text-slate-600">Fresh/Chilled shrimps and marine delicacies managed under strict cold-chain compliance.</p>
+                    </div>
+                </div>
+                <div class="group overflow-hidden rounded shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1594993440797-285149301988?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-8 bg-white">
+                        <h3 class="text-xl font-bold mb-3">Fresh Vegetables</h3>
+                        <p class="text-slate-600">Exotic greens and staple produce cultivated to meet stringent EU/GCC Maximum Residue Limits.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Products -->
-            <div id="products" class="tab-content">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">Our Export Portfolio</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="border-l-4 border-blue-900 pl-4">
-                        <h3 class="font-bold text-lg">Floriculture</h3>
-                        <p class="text-sm mb-2 text-gray-500">HSN: 0603.11.00</p>
-                        <p class="text-sm">Premium cut flowers sourced for freshness and longevity.</p>
+        <section id="logistics" class="bg-blue-900 text-white p-12 md:p-20 rounded-2xl flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6">Cold Chain Integrity</h2>
+                <p class="mb-6 leading-relaxed text-blue-100">We prioritize 100% shelf-life integrity through a "Farm to Port" strategy. Our logistics network leverages IATA-approved freight forwarders and temperature-controlled reefer chains to ensure zero deviations from the harvest site to the destination terminal.</p>
+                <div class="flex gap-4">
+                    <div class="bg-blue-800 p-4 rounded text-center w-1/3">
+                        <div class="text-2xl font-bold text-yellow-400">APEDA</div>
+                        <div class="text-xs uppercase tracking-tighter text-blue-200">Registered</div>
                     </div>
-                    <div class="border-l-4 border-blue-900 pl-4">
-                        <h3 class="font-bold text-lg">Fresh Vegetables</h3>
-                        <p class="text-sm mb-2 text-gray-500">HSN: 0709.99.20</p>
-                        <p class="text-sm">Okra, exotic greens, and seasonal produce curated to MRL specifications.</p>
+                    <div class="bg-blue-800 p-4 rounded text-center w-1/3">
+                        <div class="text-2xl font-bold text-yellow-400">MPEDA</div>
+                        <div class="text-xs uppercase tracking-tighter text-blue-200">Certified</div>
                     </div>
-                    <div class="border-l-4 border-blue-900 pl-4">
-                        <h3 class="font-bold text-lg">Fresh Fruits</h3>
-                        <p class="text-sm mb-2 text-gray-500">HSN: 0804.50.20</p>
-                        <p class="text-sm">Mangoes (Kesar/Alphonso) and citrus varieties.</p>
-                    </div>
-                    <div class="border-l-4 border-blue-900 pl-4">
-                        <h3 class="font-bold text-lg">Aquaculture/Marine</h3>
-                        <p class="text-sm mb-2 text-gray-500">HSN: 0306.36.00</p>
-                        <p class="text-sm">Fresh/Chilled shrimps and marine commodities with cold-chain monitoring.</p>
+                    <div class="bg-blue-800 p-4 rounded text-center w-1/3">
+                        <div class="text-2xl font-bold text-yellow-400">HACCP</div>
+                        <div class="text-xs uppercase tracking-tighter text-blue-200">Compliant</div>
                     </div>
                 </div>
             </div>
-
-            <!-- Logistics -->
-            <div id="logistics" class="tab-content">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">Logistics & Cold-Chain Management</h2>
-                <p class="mb-6">We prioritize 100% shelf-life integrity through our "Farm to Port" cold-chain strategy.</p>
-                <div class="bg-blue-50 p-6 rounded-lg mb-6">
-                    <h4 class="font-bold text-blue-900 mb-2">Our Workflow</h4>
-                    <p class="text-sm">[Farm/Mandi Sourcing] ➔ [Lease Packhouse Slot (APEDA approved)] ➔ [Hire Third Party Reefer Truck] ➔ [Deliver to Indian Air/Sea Port]</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="font-bold mb-2">Air Consignments</h4>
-                        <p class="text-sm">We partner with IATA-approved freight forwarders at Ahmedabad/Mumbai airports, providing fixed space allotments on commercial flights every <strong>Tuesday and Thursday</strong>.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold mb-2">Sea Connectivity</h4>
-                        <p class="text-sm">Strategic connectivity through Mundra and JNPT ports. We ship containers under strict minimum guaranteed price matrix with trusted clearing agents.</p>
-                    </div>
-                </div>
+            <div class="md:w-1/2 w-full h-80 bg-gray-300 rounded-xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
             </div>
-
-            <!-- Operations -->
-            <div id="operations" class="tab-content">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">How We Operate</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="font-bold text-blue-900 underline">Farm to Foreign Customs</h4>
-                        <p class="text-sm leading-relaxed mt-2">We partner directly with farmer clusters and Farmer Producer Organizations (FPOs) across Gujarat and Maharashtra. We mandate specific pesticide guidelines to ensure our produce complies with European (EU) and GCC Maximum Residue Limits (MRLs).</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded italic text-gray-600 text-sm">
-                        "Our Exporting Style focuses on backward integration. By monitoring the farm and packhouse stages, we minimize delays and ensure product freshness upon arrival."
-                    </div>
-                </div>
-            </div>
-
-            <!-- Payments -->
-            <div id="payments" class="tab-content">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">Payment Framework</h2>
-                <ul class="list-disc pl-5 space-y-4 text-sm">
-                    <li><strong>Initial Phase:</strong> 100% Advance Telegraphic Transfer (T/T) required for the first 3 to 5 sample air-cargo batches.</li>
-                    <li><strong>Established Rhythm:</strong> Once a shipping history is established, we operate under:
-                        <ul class="list-circle pl-5 mt-2 space-y-1">
-                            <li>Document Against Payment (DP) at Sight.</li>
-                            <li>Irrevocable Letter of Credit (LC) confirmed by an international bank.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Contact -->
-            <div id="contact" class="tab-content">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">Communication Policy</h2>
-                <div class="p-6 bg-blue-900 text-white rounded">
-                    <p class="text-sm leading-loose">We prioritize professional sourcing inquiries. We maintain a minimum turnaround time of <strong>2-3 days</strong> for all queries. In rare circumstances (such as product unavailability, geopolitical logistics restrictions, or government circulars), response times may extend to <strong>10 days</strong>.</p>
-                </div>
-                <div class="mt-8">
-                    <p class="font-bold">General Inquiries:</p>
-                    <a href="mailto:contact@lpgsvexim.com" class="text-blue-900 font-semibold underline">contact@lpgsvexim.com</a>
-                </div>
-            </div>
-
-        </div>
+        </section>
     </main>
 
-    <footer class="text-center py-10 text-gray-400 text-xs uppercase tracking-widest">
-        &copy; 2026 LPGSV EXIM. All Rights Reserved.
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6">LPGSV EXIM</h4>
+                <p class="text-sm">Connecting India's finest agro-marine exports to the world through sustainable and efficient supply chain solutions.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Export Compliance</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Global Markets</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                <p class="text-sm mb-2">Corporate HQ: Vadodara, Gujarat, India</p>
+                <a href="mailto:contact@lpgsvexim.com" class="text-blue-400 underline text-sm">contact@lpgsvexim.com</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-slate-800 text-center text-xs">
+            &copy; 2026 LPGSV EXIM. All Rights Reserved. Strategic Export Excellence.
+        </div>
     </footer>
 
     <script>
-        function showTab(tabId) {
-            // Remove active class from all buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('border-blue-900', 'text-blue-900');
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            // Show selected
-            document.getElementById(tabId).classList.add('active');
-            // Highlight active button
-            event.target.classList.add('border-blue-900', 'text-blue-900');
-        }
+        });
     </script>
 </body>
 </html>
