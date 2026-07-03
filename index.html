@@ -77,8 +77,7 @@
             <h2 class="text-3xl font-bold mb-8 text-blue-900">How We Operate</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow-sm border">
-                    <!-- FIX: Updated the Image source to a reliable link -->
-                    <img src="https://images.unsplash.com/photo-1574943320219-555e21f7d57e?auto=format&fit=crop&q=80&w=800" alt="Farmer Collaboration" class="mb-6 rounded-lg w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1595353503198-ec3798959fcf?auto=format&fit=crop&q=80&w=800" alt="Farmer Collaboration" class="mb-6 rounded-lg w-full h-48 object-cover">
                     <h4 class="font-bold text-xl text-blue-900 mb-4 underline">FPO Partnerships</h4>
                     <p class="text-slate-600 leading-relaxed">We partner with local Farmer Producer Organizations (FPOs) across Gujarat and Maharashtra. By working directly at the source, we ensure our farmers follow precise guidelines on pesticide usage to comply with international Maximum Residue Limits (MRLs).</p>
                 </div>
@@ -114,22 +113,26 @@
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-white p-8 rounded-xl shadow-sm border">
                     <h3 class="font-bold text-xl text-blue-900 mb-4">Submit Your Enquiry</h3>
-                    <form id="enquiryForm" class="space-y-4">
+                    <form action="https://formsubmit.co/sndplal@gmail.com" method="POST" class="space-y-4">
+                        <!-- Configuration fields for FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://lpgsv-exim.github.io/lpgsv/">
+                        
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Company Name</label>
-                            <input type="text" id="compName" required class="w-full p-2 border rounded border-slate-300">
+                            <input type="text" name="Company Name" required class="w-full p-2 border rounded border-slate-300">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Product Interest</label>
-                            <input type="text" id="product" required class="w-full p-2 border rounded border-slate-300">
+                            <input type="text" name="Product Interest" required class="w-full p-2 border rounded border-slate-300">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Monthly Quantity (MT)</label>
-                            <input type="number" id="qty" required class="w-full p-2 border rounded border-slate-300">
+                            <input type="number" name="Quantity" required class="w-full p-2 border rounded border-slate-300">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Target Country</label>
-                            <input type="text" id="country" required class="w-full p-2 border rounded border-slate-300">
+                            <input type="text" name="Target Country" required class="w-full p-2 border rounded border-slate-300">
                         </div>
                         <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded font-bold hover:bg-blue-800 transition">Submit Enquiry</button>
                     </form>
@@ -159,13 +162,6 @@
             document.getElementById(tabName).classList.add('active');
             evt.currentTarget.classList.add('active');
         }
-
-        // To make the form work, refer to the "Email and Form Handling Guide" artifact.
-        // You will replace this event listener with the 'action' attribute on the <form> tag.
-        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("This is currently a simulation. Please follow the 'Email and Form Handling Guide' to connect your business email.");
-        });
     </script>
 </body>
 </html>
