@@ -3,94 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPGSV EXIM | Global Sourcing & Agro-Marine Trade</title>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>LPGSV EXIM | Global Agro-Marine Sourcing & Export</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        body { background-color: #0a0a0a; color: #f5f5f5; font-family: 'Urbanist', sans-serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000'); background-size: cover; background-position: center; }
-        .sticky-nav { backdrop-filter: blur(10px); background: rgba(10, 10, 10, 0.8); }
-        .card-img-wrapper { aspect-ratio: 16/9; overflow: hidden; }
-        .card-img-wrapper img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
-        .card:hover .card-img-wrapper img { transform: scale(1.05); }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1596433848777-62f741d4400c?q=80&w=2000'); }
+        .hsn-pill { background-color: #ecfdf5; color: #065f46; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px; }
+        .workflow-step:not(:last-child)::after {
+            content: '➔';
+            margin: 0 10px;
+            color: #10b981;
+            font-weight: bold;
+        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-    <nav class="sticky-nav sticky top-0 w-full z-50 border-b border-zinc-800 py-4">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <h2 class="text-xl font-bold tracking-tighter text-white">LPGSV <span class="text-lime-400">EXIM</span></h2>
-            <div class="space-x-8 text-sm font-semibold uppercase tracking-widest">
-                <a href="#home" class="hover:text-lime-400 transition">Home</a>
-                <a href="#about" class="hover:text-lime-400 transition">About</a>
-                <a href="#products" class="hover:text-lime-400 transition">Products</a>
-                <a href="#contact" class="hover:text-lime-400 transition">Contact</a>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight text-emerald-800">LPGSV <span class="text-gray-500 font-light">EXIM</span></h1>
+            <div class="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-wider text-gray-700">
+                <a href="#about" class="hover:text-emerald-600 transition">Compliance</a>
+                <a href="#products" class="hover:text-emerald-600 transition">Products</a>
+                <a href="#workflow" class="hover:text-emerald-600 transition">Operations</a>
+                <a href="#logistics" class="hover:text-emerald-600 transition">Logistics</a>
+                <a href="#payment" class="hover:text-emerald-600 transition">Payment</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero-gradient min-h-[80vh] flex items-center justify-center text-center px-6">
-        <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Global Sourcing & Agro-Marine Trade<br><span class="text-lime-400">Premium Exports Delivered Fresh</span></h1>
-            <p class="text-lg text-zinc-400 mb-8">Bridging international markets with top-tier Indian agriculture and marine produce.</p>
-            <a href="#products" class="bg-lime-400 text-black px-8 py-4 rounded-full font-bold hover:bg-lime-300 transition">Explore Portfolio</a>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 px-6 max-w-6xl mx-auto border-b border-zinc-900">
-        <h2 class="text-4xl font-bold mb-16 text-center">Why Partner With Us?</h2>
-        <div class="grid md:grid-cols-3 gap-12 text-center">
-            <div>
-                <div class="text-lime-400 text-4xl mb-4">🚀</div>
-                <h3 class="text-xl font-bold mb-2">Logistical Precision</h3>
-                <p class="text-zinc-500">Expert cold-chain management ensuring 100% shelf-life integrity at destination.</p>
-            </div>
-            <div>
-                <div class="text-lime-400 text-4xl mb-4">⚖️</div>
-                <h3 class="text-xl font-bold mb-2">Verified Compliance</h3>
-                <p class="text-zinc-500">Full APEDA/MPEDA registry support for all international maritime shipments.</p>
-            </div>
-            <div>
-                <div class="text-lime-400 text-4xl mb-4">🌍</div>
-                <h3 class="text-xl font-bold mb-2">Global Reach</h3>
-                <p class="text-zinc-500">Seamless coordination from Gujarat ports to major global hubs.</p>
+    <section class="hero-bg min-h-[500px] flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl text-white">
+            <h2 class="text-5xl font-bold mb-6">India's Premier Global Exporter</h2>
+            <p class="text-xl text-gray-200 mb-8">Specializing in Floriculture, Perishable Vegetables, Fresh Fruits, and Aquaculture/Marine Produce.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <span class="bg-emerald-600 px-4 py-2 rounded-lg text-sm font-semibold">APEDA & MPEDA Registered</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm font-semibold">Gujarat-Mundra Hub</span>
             </div>
         </div>
     </section>
 
-    <div class="py-24 px-6 max-w-6xl mx-auto" id="products">
-        <h2 class="text-4xl font-bold mb-16">Verified Export Portfolio</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Floriculture Card -->
-            <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
-                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1596433848777-62f741d4400c?q=80&w=600" alt="Fresh cut flowers"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Premium Floriculture</h3>
-                    <p class="text-zinc-400 text-sm">Bulk export of fresh cut luxury stems for global auctions.</p>
-                </div>
+    <section id="products" class="py-20 px-6 max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-12">Export Portfolio & HSN Classification</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1596433848777-62f741d4400c?q=80&w=400" class="rounded-lg mb-4 h-40 w-full object-cover">
+                <h4 class="font-bold text-lg">Floriculture</h4>
+                <p class="text-gray-600 text-sm mb-3">Fresh cut luxury stems.</p>
+                <span class="hsn-pill">HSN: 0603.11.00</span>
             </div>
-            <!-- Horticulture Card -->
-            <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
-                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600" alt="Fresh vegetables"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Perishable Horticulture</h3>
-                    <p class="text-zinc-400 text-sm">Fresh ethnic Indian vegetables and premium seasonal fruits.</p>
-                </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=400" class="rounded-lg mb-4 h-40 w-full object-cover">
+                <h4 class="font-bold text-lg">Fresh Vegetables</h4>
+                <p class="text-gray-600 text-sm mb-3">Premium export-grade vegetables.</p>
+                <span class="hsn-pill">HSN: 0709.99.20</span>
             </div>
-            <!-- Aquaculture Card -->
-            <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
-                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1560593955-752174112e43?q=80&w=600" alt="Fresh catch"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Marine Aquaculture</h3>
-                    <p class="text-zinc-400 text-sm">Export-grade chilled Shrimps, Prawns, and native catch.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1553279768-865429fa0016?q=80&w=400" class="rounded-lg mb-4 h-40 w-full object-cover">
+                <h4 class="font-bold text-lg">Fresh Fruits</h4>
+                <p class="text-gray-600 text-sm mb-3">Seasonal varieties including mangoes.</p>
+                <span class="hsn-pill">HSN: 0804.50.20</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1560593955-752174112e43?q=80&w=400" class="rounded-lg mb-4 h-40 w-full object-cover">
+                <h4 class="font-bold text-lg">Aquaculture/Marine</h4>
+                <p class="text-gray-600 text-sm mb-3">Export-grade fresh catch.</p>
+                <span class="hsn-pill">HSN: 0306.36.00</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="py-20 bg-gray-900 text-white px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl font-bold mb-8 text-emerald-400">How We Operate</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Preservation Framework</h4>
+                    <p class="text-gray-300 leading-relaxed">Our Exporting Style involves partnering with local farmer clusters and Farmer Producer Organizations (FPOs) across Gujarat and Maharashtra. We provide strict guidelines on pesticide usage to ensure compliance with European and GCC Maximum Residue Limits (MRLs).</p>
+                </div>
+                <div class="flex flex-wrap items-center bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <span class="workflow-step">Farm/Mandi Sourcing</span>
+                    <span class="workflow-step">Lease Packhouse (APEDA)</span>
+                    <span class="workflow-step">3rd Party Reefer Truck</span>
+                    <span>Indian Port Delivery</span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="py-12 border-t border-zinc-900 text-center text-zinc-600 text-sm">
-        <p>© 2026 LPGSV EXIM. All Rights Reserved.</p>
+    <section id="logistics" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-2xl border border-gray-200">
+                <h3 class="text-2xl font-bold mb-6">Reliable Logistics</h3>
+                <ul class="space-y-4 text-gray-700">
+                    <li>• Containers shipped under strict minimum guaranteed price matrix.</li>
+                    <li>• Partnerships with IATA-approved forwarders (Ahmedabad/Mumbai).</li>
+                    <li>• <strong>Air Consignments:</strong> Fixed space allotment every Tuesday and Thursday.</li>
+                    <li>• Expertise in cold-chain integrity for UAE, UK, Netherlands, and US markets.</li>
+                </ul>
+            </div>
+            <div id="payment" class="bg-white p-8 rounded-2xl border border-gray-200">
+                <h3 class="text-2xl font-bold mb-6">Payment Terms</h3>
+                <ul class="space-y-4 text-gray-700">
+                    <li>• <strong>Initial Orders (Samples):</strong> 100% Advance Telegraphic Transfer (T/T) for the first 3-5 air-cargo batches.</li>
+                    <li>• <strong>Established Rhythm:</strong> Transition to Document Against Payment (DP) at Sight or Irrevocable Letter of Credit (LC).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 border-t py-12 text-center text-gray-600 px-6">
+        <div class="max-w-3xl mx-auto mb-8">
+            <h4 class="font-bold text-gray-900 mb-2">Communication & Inquiry Response Policy</h4>
+            <p class="text-sm">We value professional transparency. Our standard response time for inquiries is <strong>2-3 working days</strong>. In rare instances involving product unavailability, geopolitical logistics restrictions, or government circulars, response times may extend up to <strong>10 working days</strong>.</p>
+        </div>
+        <p class="text-sm">&copy; 2026 LPGSV EXIM. All Rights Reserved. APEDA/MPEDA compliant.</p>
     </footer>
 
 </body>
