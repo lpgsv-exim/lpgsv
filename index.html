@@ -77,7 +77,8 @@
             <h2 class="text-3xl font-bold mb-8 text-blue-900">How We Operate</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow-sm border">
-                    <img src="https://images.unsplash.com/photo-1595353503198-ec3798959fcf?auto=format&fit=crop&q=80&w=800" alt="Farmer Collaboration" class="mb-6 rounded-lg w-full h-48 object-cover">
+                    <!-- FIX: Updated the Image source to a reliable link -->
+                    <img src="https://images.unsplash.com/photo-1574943320219-555e21f7d57e?auto=format&fit=crop&q=80&w=800" alt="Farmer Collaboration" class="mb-6 rounded-lg w-full h-48 object-cover">
                     <h4 class="font-bold text-xl text-blue-900 mb-4 underline">FPO Partnerships</h4>
                     <p class="text-slate-600 leading-relaxed">We partner with local Farmer Producer Organizations (FPOs) across Gujarat and Maharashtra. By working directly at the source, we ensure our farmers follow precise guidelines on pesticide usage to comply with international Maximum Residue Limits (MRLs).</p>
                 </div>
@@ -159,12 +160,11 @@
             evt.currentTarget.classList.add('active');
         }
 
+        // To make the form work, refer to the "Email and Form Handling Guide" artifact.
+        // You will replace this event listener with the 'action' attribute on the <form> tag.
         document.getElementById('enquiryForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Note: Since the previous email address was failing, 
-            // we are disabling the automatic mailto for now to prevent errors.
-            // Please activate your business email and replace the placeholder above.
-            alert("Thank you for your enquiry! Our team will get in touch with you shortly. (Email functionality is currently being configured.)");
+            alert("This is currently a simulation. Please follow the 'Email and Form Handling Guide' to connect your business email.");
         });
     </script>
 </body>
