@@ -1,42 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPGSV EXIM | Global Export Solutions</title>
+    <title>LPGSV EXIM | Global Agro-Marine Export Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active-link { border-bottom: 2px solid #059669; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <nav class="bg-white p-6 shadow-sm">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-emerald-800">LPGSV EXIM</h1>
-            <div class="space-x-4 text-sm font-semibold text-gray-600">
-                <a href="#products">Products</a>
-                <a href="#logistics">Logistics</a>
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-sm z-50 p-4 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-emerald-800">LPGSV EXIM</a>
+            <div class="space-x-6 text-sm font-semibold text-gray-600 hidden md:flex">
+                <a href="#about" class="hover:text-emerald-800 transition">About</a>
+                <a href="#products" class="hover:text-emerald-800 transition">Products</a>
+                <a href="#logistics" class="hover:text-emerald-800 transition">Logistics</a>
+                <a href="#contact" class="hover:text-emerald-800 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-emerald-900 text-white py-20 px-6 text-center">
+    <header class="bg-emerald-900 text-white py-24 px-6 text-center">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-bold mb-4">Global Agro-Marine Export</h2>
-            <p class="text-lg text-emerald-100">Premium sourcing from Gujarat to the World.</p>
+            <h1 class="text-5xl font-bold mb-6">Global Agro-Marine Export</h1>
+            <p class="text-xl text-emerald-100 mb-8">Premium sourcing from Gujarat to the World. Ensuring freshness, quality, and technical compliance at every step.</p>
+            <a href="#products" class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 px-8 rounded-full transition">Explore Catalog</a>
         </div>
     </header>
 
-    <main id="products" class="py-16 px-6 max-w-5xl mx-auto">
-        <h3 class="text-2xl font-bold mb-8">Export Portfolio</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-lg border border-gray-200">
-                <h4 class="font-bold text-lg">Floriculture</h4>
-                <p class="text-gray-600 text-sm mt-2">Premium cut stems.</p>
+    <main id="about" class="py-20 px-6 max-w-6xl mx-auto">
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Mission</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2">Transparency</h3>
+                    <p class="text-gray-600">We maintain clear HSN-compliant documentation and provide real-time updates for every shipment.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2">Quality First</h3>
+                    <p class="text-gray-600">Rigorous pre-cooling and cold-chain protocols ensure your products arrive in peak condition.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2">Global Reach</h3>
+                    <p class="text-gray-600">Bridging the gap between Gujarat’s rich produce and international markets in the Middle East and beyond.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg border border-gray-200">
-                <h4 class="font-bold text-lg">Fresh Fruits</h4>
-                <p class="text-gray-600 text-sm mt-2">Seasonal mango varieties.</p>
+        </section>
+
+        <section id="products" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Export Portfolio</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-emerald-800">Floriculture</h4>
+                    <p class="text-gray-600 text-sm mt-2 mb-4">Premium cut stems, including roses and specialty blooms.</p>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">HSN 0603</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-emerald-800">Fresh Fruits</h4>
+                    <p class="text-gray-600 text-sm mt-2 mb-4">Seasonal Mangoes (Kesar/Alphonso) and citrus varieties.</p>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">HSN 0804</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-emerald-800">Vegetables</h4>
+                    <p class="text-gray-600 text-sm mt-2 mb-4">Fresh Okra, beans, and curated exotic vegetables.</p>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">HSN 0709</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-emerald-800">Marine Catch</h4>
+                    <p class="text-gray-600 text-sm mt-2 mb-4">Fresh/Chilled Shrimps and local marine export commodities.</p>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">HSN 0306</span>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="logistics" class="bg-emerald-50 rounded-3xl p-12 mb-20">
+            <h2 class="text-3xl font-bold mb-8">Logistics & Cold-Chain</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <p class="text-gray-700 leading-relaxed">
+                    Efficiency is the backbone of our operation. From pre-cooling at regional hubs to final delivery at international ports, we utilize standardized cold-chain protocols. We manage all compliance aspects including phytosanitary documentation and customs mapping to ensure zero-hassle transit.
+                </p>
+                <div class="bg-white p-6 rounded-lg shadow-inner">
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-sm"><span class="mr-2">✅</span> Pre-cooling within 4 hours of harvest</li>
+                        <li class="flex items-center text-sm"><span class="mr-2">✅</span> 100% Data-logger integrity monitoring</li>
+                        <li class="flex items-center text-sm"><span class="mr-2">✅</span> Strategic Mundra/JNPT connectivity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Let's Discuss Trade</h2>
+            <p class="text-gray-600 mb-8">Professional sourcing inquiries are prioritized. Contact us for our current wholesale price matrix.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <p class="text-lg font-semibold">Email: <a href="mailto:contact@lpgsvexim.com" class="text-emerald-700 underline">contact@lpgsvexim.com</a></p>
+                <p class="text-gray-500 mt-2 text-sm">Vadodara, Gujarat, India</p>
+            </div>
+        </section>
     </main>
 
     <footer class="py-10 text-center text-gray-500 text-sm border-t border-gray-200">
