@@ -5,53 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPGSV EXIM | Global Sourcing & Agro-Marine Trade</title>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: #0a0a0a; color: #f5f5f5; font-family: 'Urbanist', sans-serif; line-height: 1.6; }
-        .hero { min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000'); background-size: cover; background-position: center; padding: 60px 20px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: #141414; padding: 25px; border-radius: 16px; border: 1px solid #333; transition: transform 0.3s ease; }
-        .card:hover { border-color: #deff9a; }
-        .card-img-wrapper { width: 100%; height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 20px; background: #222; }
-        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        h1 { font-family: 'Poppins', sans-serif; font-size: 48px; color: #fff; margin-bottom: 20px; }
-        span { color: #deff9a; }
-        .nav { padding: 20px; text-align: center; border-bottom: 1px solid #333; background: #0a0a0a; position: sticky; top: 0; z-index: 100; }
-        .nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #0a0a0a; color: #f5f5f5; font-family: 'Urbanist', sans-serif; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000'); background-size: cover; background-position: center; }
+        .sticky-nav { backdrop-filter: blur(10px); background: rgba(10, 10, 10, 0.8); }
+        .card-img-wrapper { aspect-ratio: 16/9; overflow: hidden; }
+        .card-img-wrapper img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
+        .card:hover .card-img-wrapper img { transform: scale(1.05); }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <a href="#home">Home</a>
-        <a href="#products">Product Lines</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <section class="hero" id="home">
-        <div>
-            <h1>Global Sourcing & Agro-Marine Trade<br><span>Premium Indian Exports Delivered Fresh</span></h1>
-            <p>Premier Indian Merchant Exporter bridging international markets with top-tier agriculture.</p>
+
+    <nav class="sticky-nav sticky top-0 w-full z-50 border-b border-zinc-800 py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <h2 class="text-xl font-bold tracking-tighter text-white">LPGSV <span class="text-lime-400">EXIM</span></h2>
+            <div class="space-x-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#home" class="hover:text-lime-400 transition">Home</a>
+                <a href="#about" class="hover:text-lime-400 transition">About</a>
+                <a href="#products" class="hover:text-lime-400 transition">Products</a>
+                <a href="#contact" class="hover:text-lime-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient min-h-[80vh] flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Global Sourcing & Agro-Marine Trade<br><span class="text-lime-400">Premium Exports Delivered Fresh</span></h1>
+            <p class="text-lg text-zinc-400 mb-8">Bridging international markets with top-tier Indian agriculture and marine produce.</p>
+            <a href="#products" class="bg-lime-400 text-black px-8 py-4 rounded-full font-bold hover:bg-lime-300 transition">Explore Portfolio</a>
         </div>
     </section>
-    <div class="container" id="products">
-        <h2 style="margin-bottom: 40px; font-family: 'Poppins';">Verified Export Product Portfolio</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1596433848777-62f741d4400c?q=80&w=600" alt="Floriculture"></div>
-                <h3>Premium Floriculture</h3>
-                <p>Bulk export of fresh cut luxury stems for global auctions.</p>
+
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto border-b border-zinc-900">
+        <h2 class="text-4xl font-bold mb-16 text-center">Why Partner With Us?</h2>
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div>
+                <div class="text-lime-400 text-4xl mb-4">🚀</div>
+                <h3 class="text-xl font-bold mb-2">Logistical Precision</h3>
+                <p class="text-zinc-500">Expert cold-chain management ensuring 100% shelf-life integrity at destination.</p>
             </div>
-            <div class="card">
-                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600" alt="Horticulture"></div>
-                <h3>Perishable Horticulture</h3>
-                <p>Fresh ethnic Indian vegetables and premium seasonal fruits.</p>
+            <div>
+                <div class="text-lime-400 text-4xl mb-4">⚖️</div>
+                <h3 class="text-xl font-bold mb-2">Verified Compliance</h3>
+                <p class="text-zinc-500">Full APEDA/MPEDA registry support for all international maritime shipments.</p>
             </div>
-            <div class="card">
-                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1560593955-752174112e43?q=80&w=600" alt="Aquaculture"></div>
-                <h3>Inland & Marine Aquaculture</h3>
-                <p>Export-grade chilled Shrimps, Prawns, and native catch.</p>
+            <div>
+                <div class="text-lime-400 text-4xl mb-4">🌍</div>
+                <h3 class="text-xl font-bold mb-2">Global Reach</h3>
+                <p class="text-zinc-500">Seamless coordination from Gujarat ports to major global hubs.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="py-24 px-6 max-w-6xl mx-auto" id="products">
+        <h2 class="text-4xl font-bold mb-16">Verified Export Portfolio</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Floriculture Card -->
+            <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1596433848777-62f741d4400c?q=80&w=600" alt="Fresh cut flowers"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Premium Floriculture</h3>
+                    <p class="text-zinc-400 text-sm">Bulk export of fresh cut luxury stems for global auctions.</p>
+                </div>
+            </div>
+            <!-- Horticulture Card -->
+            <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600" alt="Fresh vegetables"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Perishable Horticulture</h3>
+                    <p class="text-zinc-400 text-sm">Fresh ethnic Indian vegetables and premium seasonal fruits.</p>
+                </div>
+            </div>
+            <!-- Aquaculture Card -->
+            <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1560593955-752174112e43?q=80&w=600" alt="Fresh catch"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Marine Aquaculture</h3>
+                    <p class="text-zinc-400 text-sm">Export-grade chilled Shrimps, Prawns, and native catch.</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <footer class="py-12 border-t border-zinc-900 text-center text-zinc-600 text-sm">
+        <p>© 2026 LPGSV EXIM. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
