@@ -3,32 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPGSV EXIM</title>
+    
+    <title>LPGSV | Global Agro-Marine Supply Chain & Logistics</title>
+    <meta name="description" content="LPGSV is a premier APEDA & MPEDA registered export operator from India, specializing in high-integrity cold-chain logistics for Floriculture, Perishables, Fruits, and Marine cargo.">
+    <meta name="keywords" content="LPGSV, LPGSV Vadodara, LPGSV logistics, LPGSV export, cold chain India">
+    
+    <meta name="google-site-verification" content="b93eced4f673581b" />
+
     <style>
-        body { background-color: #0b0f17; color: #f8fafc; font-family: sans-serif; padding: 50px; text-align: center; }
-        .box { background: #131a26; padding: 30px; border-radius: 8px; border: 1px solid #3b82f6; max-width: 500px; margin: 0 auto; }
-        input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; background: #0f1319; color: white; border: 1px solid #3b82f6; border-radius: 4px; box-sizing: border-box; }
-        button { background: #3b82f6; color: white; border: none; padding: 12px; width: 100%; font-weight: bold; cursor: pointer; border-radius: 4px; }
-    </style>
-</head>
-<body>
+        :root {
+            --bg-main: #0b0f17;
+            --bg-card: #131a26;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(59, 130, 246, 0.15);
+        }
 
-    <div class="box">
-        <h1>LPGSV EXIM Portal</h1>
-        <p>Testing Emergency Email Link Infrastructure</p>
-        <hr style="border-color: #3b82f6; margin: 20px 0;">
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         
-        <form action="https://formsubmit.co/sndplal@gmail.com" method="POST">
-            <input type="text" name="company" placeholder="Company Name" required>
-            <input type="email" name="email" placeholder="Your Email Address" required>
-            <select name="product">
-                <option value="Floriculture">Floriculture</option>
-                <option value="Logistics">Logistics Operations</option>
-            </select>
-            <textarea name="message" rows="4" placeholder="Message Requirements" required></textarea>
-            <button type="submit">Submit Test Inquiry</button>
-        </form>
-    </div>
+        body { 
+            background-color: var(--bg-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
 
-</body>
-</html>
+        header {
+            background-color: rgba(19, 26, 38, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo-block .brand {
+            font-size: 26px; font-weight: 800; letter-spacing: 2px; color: var(--accent-blue);
+        }
+
+        .logo-block .subtitle {
+            font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted);
+        }
+
+        nav { display: flex; gap: 10px; }
+        .nav-link {
+            color: var(--text-muted); text-decoration: none; padding: 10px 16px;
+            font-size: 14px; font-weight: 600; border-radius: 4px; transition: all 0.3s ease;
+        }
+        .nav-link:hover { color: var(--text-main); background-color: rgba(59, 130, 246, 0.15); }
+
+        .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; border-bottom: 1px solid var(--border-color); }
+        h2 { font-size: 32px; margin-bottom: 25px; color: var(--text-main); border-left: 4px solid var(--accent-blue); padding-left: 15px; }
+
+        .grid-layout {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 25px;
+        }
+
+        .corporate-card {
+            background-color: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .corporate-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+
+        .card-img-wrapper { width: 100%; height: 220px; background-color: #1a2333; }
+        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 25px; }
+        .card-body h3 { font-size: 20px; color: var(--text-main); margin-bottom: 8px; }
+
+        .hs-badge {
+            display: inline-block; background-color: rgba(16, 185, 129, 0.15); color: var(--accent-green);
+            padding: 4px 8px; font-size: 12px; font-weight: 700; border-radius: 4px; margin-bottom: 12px;
+            border: 1px solid rgba(16,
