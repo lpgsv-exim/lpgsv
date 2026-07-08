@@ -69,7 +69,7 @@
             color: var(--text-muted);
         }
 
-        /* Smooth Scroll Navigation Menu Links */
+        /* Smooth Scroll Navigation Links */
         nav {
             display: flex;
             gap: 10px;
@@ -90,20 +90,18 @@
             background-color: rgba(59, 130, 246, 0.15);
         }
 
-        /* Container Layouts */
+        /* Layout Architecture */
         .wrapper {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Continuous Scrolling Sections */
         section {
             padding: 80px 0;
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* Typography & Components */
         h2 {
             font-size: 32px;
             margin-bottom: 25px;
@@ -172,7 +170,7 @@
             color: var(--text-muted);
         }
 
-        /* Flowcharts & Workflows */
+        /* Workflow Visualizers */
         .workflow-visualizer {
             display: flex;
             flex-wrap: wrap;
@@ -215,7 +213,6 @@
             text-align: center;
         }
 
-        /* Info Banners */
         .info-strip {
             background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
             border-left: 4px solid var(--accent-blue);
@@ -224,18 +221,82 @@
             margin-bottom: 30px;
         }
 
-        .info-strip h4 {
-            font-size: 18px;
-            margin-bottom: 6px;
+        .info-strip h4 { font-size: 18px; margin-bottom: 6px; color: var(--text-main); }
+        .info-strip p { font-size: 14px; color: var(--text-muted); }
+
+        /* Integrated Inquiry Form Style */
+        .enquiry-form-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
             color: var(--text-main);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .info-strip p {
+        .form-control {
+            width: 100%;
+            background-color: rgba(15, 19, 25, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 4px;
+            padding: 12px 16px;
+            color: var(--text-main);
             font-size: 14px;
-            color: var(--text-muted);
+            transition: border-color 0.3s ease;
         }
 
-        /* Footer architecture */
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .submit-btn {
+            background-color: var(--accent-blue);
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2563eb;
+        }
+
+        .direct-link-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(15, 19, 25, 0.5);
+            border-radius: 6px;
+            font-size: 14px;
+            border: 1px dashed rgba(148, 163, 184, 0.15);
+        }
+
+        .direct-link-box a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
         footer {
             background-color: #080b11;
             border-top: 1px solid var(--border-color);
@@ -298,16 +359,16 @@
             </div>
         </section>
 
-        <!-- SECTION 2: PRODUCTS (IMAGES GUARANTEED VISIBLE) -->
+        <!-- SECTION 2: PRODUCTS -->
         <section id="products">
             <h2>Our Specialized Export Portfolio</h2>
             <p style="color: var(--text-muted); margin-bottom: 20px;">Direct sourcing management and high-integrity climate delivery for premium global commodity channels.</p>
             
             <div class="grid-layout">
-                <!-- Product 1 -->
+                <!-- Fixed Floriculture Image to Premium Cut Flowers -->
                 <div class="corporate-card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=500&q=80" alt="Fresh cut commercial floriculture roses packed for cold chain distribution">
+                        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=500&q=80" alt="Premium fresh-cut corporate floriculture arrangements ready for distribution">
                     </div>
                     <div class="card-body">
                         <div class="hs-badge">HS CODE: 0603.11.00</div>
@@ -315,7 +376,7 @@
                         <p>Premium fresh-cut roses, commercial buds, and ornamental floral variants processed under specialized climate limits for international auction houses.</p>
                     </div>
                 </div>
-                <!-- Product 2 -->
+
                 <div class="corporate-card">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=500&q=80" alt="Fresh premium grade green export vegetables sorted for shipment">
@@ -326,10 +387,10 @@
                         <p>High-nutrition green varieties, mixed assortments, and premium produce sourced under clean sanitation mandates for prompt air freight.</p>
                     </div>
                 </div>
-                <!-- Product 3 -->
+
                 <div class="corporate-card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=500&q=80" alt="Fresh whole export mangoes and topical fruits gathered together">
+                        <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=500&q=80" alt="Fresh premium export tropical fruits gathered together">
                     </div>
                     <div class="card-body">
                         <div class="hs-badge">HS CODE: 0804.50.20</div>
@@ -337,7 +398,7 @@
                         <p>Choice geographical varieties, including world-renowned regional mangoes and seasonal fruits, handled carefully to arrest pre-cooling losses.</p>
                     </div>
                 </div>
-                <!-- Product 4 -->
+
                 <div class="corporate-card">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=500&q=80" alt="High grade frozen raw aquaculture shrimp ready for packing">
@@ -374,7 +435,7 @@
             </div>
         </section>
 
-        <!-- SECTION 4: LOGISTICS -->
+        <!-- SECTION 4: LOGISTICS (WITH INTEGRATED GRAPHICS) -->
         <section id="logistics">
             <h2>Supply Chain & Cold-Chain Management</h2>
             
@@ -383,7 +444,6 @@
                 <p>Ensuring complete structural compliance at every physical transfer node from Indian fields to global distribution markets.</p>
             </div>
 
-            <!-- Workflow Flowchart Segment -->
             <div class="workflow-visualizer">
                 <div class="flow-step"><span>Node 01</span>Farm / Mandi Sourcing</div>
                 <div class="flow-arrow">➔</div>
@@ -394,7 +454,21 @@
                 <div class="flow-step"><span>Node 04</span>Deliver to Indian Air/Sea Port</div>
             </div>
 
-            <div class="grid-layout" style="margin-top: 40px;">
+            <!-- New Corporate Logistics Imagery Layout -->
+            <div class="grid-layout" style="margin-bottom: 30px;">
+                <div class="corporate-card">
+                    <div class="card-img-wrapper" style="height: 160px;">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="Cold storage logistics and temperature monitored global shipping container warehouse">
+                    </div>
+                </div>
+                <div class="corporate-card">
+                    <div class="card-img-wrapper" style="height: 160px;">
+                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=500&q=80" alt="Commercial air cargo distribution aircraft being loaded on tarmac">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-layout">
                 <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 25px; border-radius: 8px;">
                     <h3 style="color: var(--accent-blue); margin-bottom: 12px; font-size: 19px;">Maritime Ocean Cargo</h3>
                     <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
@@ -443,32 +517,70 @@
         <section id="contact">
             <h2>Connect with Our Trade Desk</h2>
             
-            <div class="grid-layout" style="align-items: start;">
-                <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 8px;">
-                    <h3 style="margin-bottom: 15px; font-size: 20px; color: #fff;">Submit an RFQ / Trade Inquiry</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">Our compliance unit assesses product variations, volume metrics, and global multi-modal allocations.</p>
+            <div class="grid-layout" style="align-items: start; grid-template-columns: 1.1fr 0.9fr;">
+                
+                <!-- Active Email Enquiry Form Component -->
+                <div class="enquiry-form-container">
+                    <h3 style="margin-bottom: 15px; font-size: 20px; color: #fff;">Global Trade Enquiry Form</h3>
                     
-                    <div style="background: rgba(15,19,25,0.7); padding: 20px; border-radius: 6px; border-left: 3px solid var(--accent-blue);">
-                        <h4 style="font-size: 15px; margin-bottom: 5px; color: var(--text-main);">Turnaround Framework Commitment</h4>
+                    <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label>Company Name / Buyer Identity</label>
+                            <input type="text" name="company" class="form-control" placeholder="e.g. EuroHub Logistics Ltd" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Official Email Address</label>
+                            <input type="email" name="_replyto" class="form-control" placeholder="buyer@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Target Product Segment</label>
+                            <select name="product_segment" class="form-control">
+                                <option value="Floriculture">Floriculture (HS: 0603.11.00)</option>
+                                <option value="Vegetables">Perishable Vegetables (HS: 0709.99.90)</option>
+                                <option value="Fruits">Fresh Fruits (HS: 0804.50.20)</option>
+                                <option value="Marine">Aquaculture & Marine (HS: 0306.17.90)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Detailed Specifications / RFQ Requirements</label>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Specify quantity, target delivery timeline, and port destination specifications..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit Secure Enquiry</button>
+                    </form>
+
+                    <div class="direct-link-box">
+                        Direct Desk Email: <a href="mailto:sndplal@gmail.com">sndplal@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- Right Info & Branding Sidebar Box -->
+                <div>
+                    <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 8px; margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 12px; font-size: 18px; color: #fff;">Turnaround Framework</h3>
                         <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
-                            Our response desk provides explicit, finalized quotes within a <strong>minimum turnaround of 2-3 days</strong>. 
+                            Our response desk provides explicit, finalized compliance quotes within a <strong>minimum turnaround of 2-3 days</strong>. 
                         </p>
                         <p style="font-size: 11px; color: #64748b; margin-top: 12px; font-style: italic; line-height: 1.5;">
                             *Notice: In isolated events impacted by rare product season unavailabilities, sudden geopolitical ocean routing adjustments, or immediate regulatory government trade circulars, response queues may scale up to 10 days.
                         </p>
                     </div>
+
+                    <div class="corporate-card">
+                        <div class="card-img-wrapper" style="height: 180px;">
+                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Corporate commercial international logistics dock loading ocean container freighter ship">
+                        </div>
+                        <div class="card-body">
+                            <h3>LPGSV EXIM India</h3>
+                            <p style="margin-bottom: 8px; font-size: 14px;"><strong>HQ Operations:</strong> Vadodara, Gujarat, India</p>
+                            <p style="font-size: 14px; margin-bottom: 12px;">
+                                WhatsApp Trade Line: <a href="https://wa.me/919871391542" style="color: var(--accent-green); text-decoration:none; font-weight:700;">+91 9871391542</a>
+                            </p>
+                            <p style="font-size: 13px; color: var(--text-muted);">Please connect securely via our trade enterprise channels for active cargo matching or immediate purchase order execution.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="corporate-card">
-                    <div class="card-img-wrapper" style="height: 240px;">
-                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Corporate commercial international logistics dock loading ocean container freighter ship">
-                    </div>
-                    <div class="card-body">
-                        <h3>LPGSV EXIM India</h3>
-                        <p style="margin-bottom: 8px; font-size: 14px;"><strong>HQ Operations:</strong> Vadodara, Gujarat, India</p>
-                        <p style="font-size: 13px; color: var(--text-muted);">Please connect securely via our trade enterprise hubs for active logistics matching or purchase order filing.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
