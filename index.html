@@ -4,148 +4,478 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 🟢 Optimized Standalone Title for "LPGSV" Search -->
-    <title>LPGSV | Global Trade, Logistics & Supply Chain Solutions</title>
-
-    <!-- 🟢 Meta Description to Train Google's Search Engine Context -->
-    <meta name="description" content="Welcome to the official LPGSV portal. Your premium partner for global logistics, customs compliance, infrastructure movements, and international trade operations.">
+    <title>LPGSV | Global Agro-Marine Export Excellence</title>
+    <meta name="description" content="LPGSV EXIM is a premier APEDA & MPEDA registered exporter from India, specializing in high-integrity cold-chain logistics for Floriculture, Perishables, Fruits, and Marine cargo.">
     
-    <!-- 🟢 Your Exact Google Verification Code Incorporated -->
     <meta name="google-site-verification" content="b93eced4f673581b" />
 
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            background-color: #0f1319; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #e2e8f0;
-            overflow-x: hidden;
+        :root {
+            --bg-main: #0b0f17;
+            --bg-card: #131a26;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(59, 130, 246, 0.15);
         }
-        .container {
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            background-color: var(--bg-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Enterprise Header */
+        header {
+            background-color: rgba(19, 26, 38, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            border-bottom: 2px solid #1e293b;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo-area .brand {
-            font-size: 28px;
+
+        .logo-block .brand {
+            font-size: 26px;
             font-weight: 800;
             letter-spacing: 2px;
-            color: #3b82f6;
+            color: var(--accent-blue);
         }
-        .logo-area .subtitle {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #94a3b8;
-            margin-top: 4px;
-        }
-        .tagline {
-            font-style: italic;
-            color: #64748b;
-            font-size: 14px;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #111625 0%, #0b0e17 100%);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 8px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-        .hero-section h1 {
-            font-size: 32px;
-            color: #f8fafc;
-            margin-bottom: 15px;
-        }
-        .hero-section p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #cbd5e1;
-            max-width: 800px;
-        }
-        .grid-services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        .service-card {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            border-radius: 6px;
-            padding: 25px;
-            transition: transform 0.2s;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #3b82f6;
-        }
-        .service-card h3 {
-            color: #3b82f6;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .service-card p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #94a3b8;
-        }
-        footer {
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
-            padding-top: 20px;
-            text-align: center;
+
+        .logo-block .subtitle {
             font-size: 11px;
-            color: #64748b;
-            line-height: 1.6;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+
+        /* Navigation Menu tabs */
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-tab {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover, .nav-tab.active {
+            color: var(--text-main);
+            background-color: rgba(59, 130, 246, 0.15);
+            box-shadow: inset 0 -2px 0 var(--accent-blue);
+        }
+
+        /* Container Layouts */
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 75vh;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography & Components */
+        h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 15px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .corporate-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .corporate-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 200px;
+            background-color: #1a2333;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-body h3 {
+            font-size: 20px;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .hs-badge {
+            display: inline-block;
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Flowcharts & Workflows */
+        .workflow-visualizer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            gap: 15px;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(15, 19, 25, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .flow-step span {
+            display: block;
+            font-size: 11px;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .flow-arrow {
+            color: var(--accent-blue);
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Info Banners */
+        .info-strip {
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+        }
+
+        .info-strip h4 {
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .info-strip p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Footer architecture */
+        footer {
+            background-color: #080b11;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        footer p { margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 15px; text-align: center; }
+            nav { flex-wrap: wrap; justify-content: center; }
+            .flow-arrow { transform: rotate(90deg); margin: 5px 0; width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <div class="logo-area">
-                <div class="brand">LPGSV</div>
-                <div class="subtitle">International Trade & Logistics</div>
+    <header>
+        <div class="header-container">
+            <div class="logo-block">
+                <div class="brand">LPGSV EXIM</div>
+                <div class="subtitle">Global Agro-Marine Logistics</div>
             </div>
-            <div class="tagline">Navigating Global Supply Chains Seamlessly</div>
-        </header>
+            <nav>
+                <button class="nav-tab active" onclick="switchTab('home')">Home</button>
+                <button class="nav-tab" onclick="switchTab('products')">Products</button>
+                <button class="nav-tab" onclick="switchTab('operations')">Operations</button>
+                <button class="nav-tab" onclick="switchTab('logistics')">Logistics</button>
+                <button class="nav-tab" onclick="switchTab('payment')">Payment</button>
+                <button class="nav-tab" onclick="switchTab('contact')">Contact Us</button>
+            </nav>
+        </div>
+    </header>
 
-        <section class="hero-section">
-            <h1>Cross-Border Trade Excellence</h1>
-            <p>Welcome to LPGSV. We specialize in robust, end-to-end supply chain execution, international freight operations, and comprehensive customs compliance architectures. Our mission is to streamline complex commercial logistics and ensure seamless transitions across global maritime and air gateways.</p>
+    <div class="wrapper">
+
+        <section id="home" class="tab-content active">
+            <div style="background: linear-gradient(135deg, #111827 0%, #070a10 100%); padding: 60px 40px; border-radius: 12px; border: 1px solid var(--border-color); text-align: center; margin-bottom: 4px;">
+                <h1 style="font-size: 42px; margin-bottom: 20px; letter-spacing: 1px;">Global Agro-Marine Export Excellence</h1>
+                <p style="font-size: 18px; color: var(--text-muted); max-width: 850px; margin: 0 auto 30px auto; line-height: 1.7;">
+                    Bridge connecting India's rich agrarian produce to discerning international markets with precision, integrity, and cold-chain reliability.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <div style="background: rgba(30, 41, 59, 0.4); padding: 15px 25px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); text-align: left; min-width: 240px;">
+                        <h5 style="color: var(--accent-blue); font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Accreditations</h5>
+                        <p style="font-size: 14px; font-weight: 700; margin-top: 5px;">APEDA & MPEDA Registered</p>
+                    </div>
+                    <div style="background: rgba(30, 41, 59, 0.4); padding: 15px 25px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); text-align: left; min-width: 240px;">
+                        <h5 style="color: var(--accent-green); font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Quality Standard</h5>
+                        <p style="font-size: 14px; font-weight: 700; margin-top: 5px;">100% Destination Shelf-Life Integrity</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <main class="grid-services">
-            <div class="service-card">
-                <h3>Customs Brokerage & Compliance</h3>
-                <p>Expert processing, regulatory documentation mapping, EXIM policy adherence, and swift customs clearance strategies across critical sea, air, and dry port custom houses.</p>
-            </div>
+        <section id="products" class="tab-content">
+            <h2>Our Specialized Export Portfolio</h2>
+            <p style="color: var(--text-muted); margin-bottom: 10px;">Direct sourcing and supply processing infrastructure mapping to global markets (UAE, UK, Netherlands, and USA).</p>
             
-            <div class="service-card">
-                <h3>Global Freight Forwarding</h3>
-                <p>Comprehensive ocean and air transport networks designed to manage containerized movements, dynamic routing schedules, and critical multi-modal supply chains.</p>
+            <div class="grid-layout">
+                <div class="corporate-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=500&q=80" alt="Fresh cut commercial floriculture and roses packed for cold chain distribution">
+                    </div>
+                    <div class="card-body">
+                        <div class="hs-badge">HS CODE: 0603.11.00</div>
+                        <h3>Floriculture</h3>
+                        <p>Premium fresh-cut roses, commercial buds, and ornamental floral variants processed under specialized climate limits for international auction houses.</p>
+                    </div>
+                </div>
+                <div class="corporate-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=500&q=80" alt="Fresh premium grade green export vegetables sorted for shipment">
+                    </div>
+                    <div class="card-body">
+                        <div class="hs-badge">HS CODE: 0709.99.90</div>
+                        <h3>Perishable Vegetables</h3>
+                        <p>High-nutrition green varieties, mixed assortments, and premium produce sourced under clean sanitation mandates for prompt air freight.</p>
+                    </div>
+                </div>
+                <div class="corporate-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=500&q=80" alt="Fresh whole export mangoes and topical fruits gathered together">
+                    </div>
+                    <div class="card-body">
+                        <div class="hs-badge">HS CODE: 0804.50.20</div>
+                        <h3>Fresh Fruits</h3>
+                        <p>Choice geographical varieties, including world-renowned regional mangoes and seasonal fruits, handled carefully to arrest pre-cooling losses.</p>
+                    </div>
+                </div>
+                <div class="corporate-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=500&q=80" alt="High grade frozen raw aquaculture shrimp ready for packing">
+                    </div>
+                    <div class="card-body">
+                        <div class="hs-badge">HS CODE: 0306.17.90</div>
+                        <h3>Aquaculture & Marine</h3>
+                        <p>Premium frozen shrimp, prawns, and marine catches adhering completely to stringent MPEDA sanitary evaluation parameters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="operations" class="tab-content">
+            <h2>How We Operate</h2>
+            
+            <div class="info-strip">
+                <h4>Preservation Framework: From Farm to Foreign Customs</h4>
+                <p>Our operational model bridges smallholder clusters to sophisticated global border checks through technical compliance and modern post-harvest engineering handling styles.</p>
             </div>
 
-            <div class="service-card">
-                <h3>Project Cargo & Infrastructure</h3>
-                <p>Specialized logistics planning for over-dimensional, heavy-lift infrastructure components and sensitive technological equipment requiring flawless terminal execution.</p>
+            <div style="background-color: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 35px;">
+                <h3 style="margin-bottom: 15px; color: var(--accent-blue);">Sourcing & Farmer Alignment</h3>
+                <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 20px;">
+                    We deliberately partner with verified local farmer clusters and progressive <strong>Farmer Producer Organizations (FPOs)</strong> spanning high-yield regions across Gujarat and Maharashtra. 
+                </p>
+                <div style="background: rgba(15,19,25,0.5); padding: 20px; border-left: 3px solid var(--accent-green); border-radius: 4px;">
+                    <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:var(--accent-green); display:block; margin-bottom:5px;">MRL Traceability Mandate</span>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                        To guarantee frictionless customs arrivals, we supply farmers with strict, customized pre-harvest directives specifying permissible pesticide classes. This precise intervention keeps agro-chemical parameters securely within European Union and GCC <strong>Maximum Residue Limits (MRLs)</strong>.
+                    </p>
+                </div>
             </div>
-        </main>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 LPGSV. All Rights Reserved.</p>
-            <p>Compliance Notice: All operations are strictly conducted in accordance with applicable global trade laws, maritime customs frameworks, and cross-border statutory compliance standards.</p>
-        </footer>
+        <section id="logistics" class="tab-content">
+            <h2>Supply Chain & Cold-Chain Management</h2>
+            
+            <div class="info-strip" style="border-left-color: var(--accent-green);">
+                <h4>Integrated Cold Chain Workflow Pipeline</h4>
+                <p>Ensuring complete structural compliance at every physical transfer node from Indian fields to global distribution markets.</p>
+            </div>
+
+            <div class="workflow-visualizer">
+                <div class="flow-step"><span>Step 01</span>Farm & Mandi Sourcing</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step"><span>Step 02</span>Lease APEDA Packhouse Slot</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step"><span>Step 03</span>Hire Third Party Reefer Truck</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step"><span>Step 04</span>Deliver to Air/Sea Port</div>
+            </div>
+
+            <div class="grid-layout" style="margin-top: 40px;">
+                <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 25px; border-radius: 8px;">
+                    <h3 style="color: var(--text-main); margin-bottom: 12px; font-size: 18px;">Maritime Ocean Shipments</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+                        We execute multi-port container clearances seamlessly from prominent Gujarat maritime nodes. Ocean freight routes utilize trusted customs clearing agents shipping container lots protected under a highly structured, <strong>minimum guaranteed price matrix</strong> to insulate from spot market volatility.
+                    </p>
+                </div>
+
+                <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 25px; border-radius: 8px;">
+                    <h3 style="color: var(--text-main); margin-bottom: 12px; font-size: 18px;">Priority Air Consignments</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+                        For highly time-sensitive payloads, we maintain an established operational relationship with premier, <strong>IATA-approved freight forwarders</strong> stationed at Ahmedabad and Mumbai airports. This infrastructure provides our buyers with fixed, guaranteed space allotments on commercial air carriers scheduled every <strong>Tuesday and Thursday</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="payment" class="tab-content">
+            <h2>Flexible Commercial Payment Plans</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Structured financial workflows designed to support transparent client onboarding and risk mitigation during business scaling.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                    <div style="background: var(--accent-blue); width: 12px;"></div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 18px; margin-bottom: 6px;">Phase 1: Initial Relationship Onboarding</h3>
+                        <p style="font-size: 14px; color: var(--text-muted);">
+                            Applicable for the first <strong>3 to 5 sample air-cargo batches</strong>: Conducted strictly under <strong>100% Advance Telegraphic Transfer (T/T)</strong> terms. This ensures immediate operational funding for meticulous farm sourcing and packhouse scheduling.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                    <div style="background: var(--accent-green); width: 12px;"></div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 18px; margin-bottom: 6px;">Phase 2: Established Operational Rhythm</h3>
+                        <p style="font-size: 14px; color: var(--text-muted);">
+                            Once standard shipping regularities are verified, we transition our trade partners onto extended transaction lines. Options extend to <strong>Document Against Payment (DP) at Sight</strong> or an <strong>Irrevocable Letter of Credit (LC)</strong>, confirmed reliably through Tier-1 international banks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <h2>Connect with Our Trade Desk</h2>
+            
+            <div class="grid-layout" style="align-items: start;">
+                <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 8px;">
+                    <h3 style="margin-bottom: 15px; font-size: 20px;">Submit an RFQ / Trade Inquiry</h3>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Our trade desk reviews product specifications, custom pricing models, and specific logistics assignments.</p>
+                    
+                    <div style="background: rgba(15,19,25,0.7); padding: 20px; border-radius: 6px; border-left: 3px solid var(--accent-blue);">
+                        <h4 style="font-size: 15px; margin-bottom: 5px; color: var(--text-main);">Turnaround Framework</h4>
+                        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+                            We maintain an elite response discipline, dispatching formal compliance quotes within a <strong>minimum turnaround of 2-3 days</strong>. 
+                        </p>
+                        <p style="font-size: 12px; color: #64748b; margin-top: 10px; font-style: italic;">
+                            *Note: Under rare logistical conditions (such as severe product unavailabilities, localized geopolitical shifts restricting maritime gateways, or sudden government trade circular modifications), processing queues can extend up to 10 days.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="corporate-card">
+                    <div class="card-img-wrapper" style="height: 250px;">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Corporate commercial international logistics dock loading ocean container freighter ship">
+                    </div>
+                    <div class="card-body">
+                        <h3>LPGSV EXIM India</h3>
+                        <p style="margin-bottom: 10px; font-size: 14px;"><strong>HQ Operations:</strong> Vadodara, Gujarat, India</p>
+                        <p style="font-size: 13px;">For active logistics matching, please communicate directly via our registered trade enterprise portals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-</body>
-</html>
+    <footer>
+        <p>&copy; 2026 LPGSV EXIM. All Rights Reserved.</p>
+        <p style="color: #475569; font-size: 11px;">Statutory Compliance: APEDA Registered Portfolio | MPEDA Quality System Protocols | Customs Port-Matching Framework Compliant</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // Remove active classes from all nav tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove
