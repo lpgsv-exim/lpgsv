@@ -3,166 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPGSV EXIM - Logistics & Customs Solutions</title>
+    <title>LPGSV EXIM | Sustainable Agro & Eco-Products Export</title>
+    <meta name="description" content="LPGSV EXIM - Premier merchant exporter of organic spices, dehydrated agri-products, biodegradable areca leaf dinnerware, and herbal exports from India.">
     <style>
         :root {
-            --bg-main: #0a0f1d;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-blue: #38bdf8;
-            --border-color: #1e293b;
+            --primary: #1b4332;
+            --accent: #2d6a4f;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gold: #d4af37;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
         }
 
         header {
-            border-bottom: 1px solid var(--border-color);
-            background-color: rgba(10, 15, 29, 0.8);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .logo h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(to right, #fff, var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        header h1 span {
+            color: var(--gold);
         }
 
         nav a {
-            color: var(--text-muted);
+            color: white;
             text-decoration: none;
-            margin-left: 24px;
-            font-size: 14px;
+            margin-left: 1.5rem;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--accent-blue);
+            color: var(--gold);
         }
 
-        main {
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 0 20px;
+        .hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
         }
 
         .hero h2 {
-            font-size: 36px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-            line-height: 1.2;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .hero p {
-            color: var(--text-muted);
-            font-size: 18px;
-            margin-bottom: 40px;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
         }
 
-        .enquiry-form-container {
-            background-color: rgba(15, 23, 42, 0.6);
-            border: 1px solid var(--border-color);
-            padding: 40px;
-            border-radius: 12px;
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b89628;
+            color: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 1.2rem;
         }
 
         .form-group label {
             display: block;
-            font-size: 12px;
-            color: var(--text-main);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
             font-weight: 600;
         }
 
-        .form-control {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            background-color: rgba(10, 15, 29, 0.8);
-            border: 1px solid var(--border-color);
-            padding: 12px 16px;
-            border-radius: 6px;
-            color: var(--text-main);
-            font-size: 15px;
-            box-sizing: border-box;
-            transition: border-color 0.2s;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-        }
-
-        .submit-btn {
-            background-color: var(--accent-blue);
-            color: #0a0f1d;
-            border: none;
-            padding: 14px 28px;
-            font-size: 15px;
-            font-weight: 700;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.2s;
-        }
-
-        .submit-btn:hover {
-            background-color: #7dd3fc;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
         }
 
         footer {
-            background-color: #070a14;
-            border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
+            background-color: var(--primary);
+            color: white;
             text-align: center;
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 80px;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            .header-container {
+            header {
                 flex-direction: column;
-                gap: 15px;
-            }
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
+                gap: 1rem;
             }
             nav a {
-                margin: 5px 12px;
+                margin: 0 0.5rem;
             }
-            .enquiry-form-container {
-                padding: 24px;
+            .hero h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -170,53 +204,117 @@
 <body>
 
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>LPGSV EXIM</h1>
-            </div>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Services</a>
-                <a href="#">Enquiry</a>
-            </nav>
-        </div>
+        <h1>LPGSV <span>EXIM</span></h1>
+        <nav>
+            <a href="#products">Product Portfolio</a>
+            <a href="#advantages">Why LPGSV</a>
+            <a href="#contact">Trade Inquiry</a>
+        </nav>
     </header>
 
-    <main>
-        <div class="hero">
-            <h2>Customs Clearance & Global Logistics</h2>
-            <p>Streamline your import and export operations with precise, regulatory-compliant supply chain solutions management.</p>
-        </div>
+    <section class="hero">
+        <h2>Sustainable & Eco-Friendly Exports from India</h2>
+        <p>Connecting verified regional producers to global markets. Specialized in premium dehydrated spices, eco-friendly areca tableware, and organic herbal exports.</p>
+        <a href="#contact" class="btn">Request Quotation (RFQ)</a>
+    </section>
 
-        <div class="enquiry-form-container">
-            <form action="https://forminit.com/f/ajp9gml4f5x" method="POST">
+    <div class="container" id="products">
+        <h2 class="section-title">Our Specialized Export Portfolio</h2>
+        <div class="grid">
+            
+            <!-- Product 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">HS CODE: 0910.30.30</span>
+                    <h3>High-Curcumin Organic Turmeric</h3>
+                    <p>Sourced directly from verified agricultural clusters in Western India. Processed under clean hygiene mandates with guaranteed 5%+ curcumin content.</p>
+                    <small><strong>Packaging:</strong> 10kg/25kg vacuum-sealed or multi-wall paper bags.</small>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">HS CODE: 0712.90.20</span>
+                    <h3>Dehydrated Garlic & Onion Powder</h3>
+                    <p>Low-moisture, extended-shelf-life dehydrated powders and flakes. Perfect for food processing industries, retail packaging, and culinary distribution.</p>
+                    <small><strong>Packaging:</strong> Moisture-proof foil-lined cartons.</small>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">HS CODE: 4419.90.90</span>
+                    <h3>Areca Palm Leaf Dinnerware</h3>
+                    <p>100% natural, chemical-free, biodegradable dinnerware pressed from fallen betel nut sheaths. Leak-proof, microwave-safe, and heat-resistant.</p>
+                    <small><strong>SKUs:</strong> 10" Round, 12" 4-Compartment, Bowls, and Cutlery.</small>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">HS CODE: 3304.99.10</span>
+                    <h3>Organic Henna & Herbal Powders</h3>
+                    <p>Triple-sifted micro-fine body art henna and natural indigo powders. Fully compliant with international cosmetic safety standards.</p>
+                    <small><strong>Target Markets:</strong> Southeast Asia, Middle East, Europe.</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" id="advantages">
+        <h2 class="section-title">The LPGSV Export Edge</h2>
+        <div class="grid">
+            <div style="text-align: center; padding: 1rem;">
+                <h3>Small-Batch Flexibility</h3>
+                <p>We accommodate both LCL (Less-than-Container Load) shipments and bulk orders, allowing international buyers to test sample batches with minimal risk.</p>
+            </div>
+            <div style="text-align: center; padding: 1rem;">
+                <h3>Quality Certification</h3>
+                <p>Strict quality audits, phytosanitary checks, and APEDA/Spices Board compliant export packing protocol.</p>
+            </div>
+            <div style="text-align: center; padding: 1rem;">
+                <h3>Efficient Logistics</h3>
+                <p>Streamlined port handling via Nhava Sheva and Hazira ports with full documentation support (Certificate of Origin, Form A, Bill of Lading).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2 class="section-title">Global Trade Inquiry Form</h2>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/your_form_id" method="POST">
                 <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" name="fi_text_company" class="form-control" placeholder="Your Company Name" required>
+                    <label for="company">Company / Buyer Name</label>
+                    <input type="text" id="company" name="company" required placeholder="Your Company Name">
                 </div>
                 <div class="form-group">
-                    <label for="name">Contact Person</label>
-                    <input type="text" id="name" name="fi_sender_fullName" class="form-control" placeholder="Your Name" required>
+                    <label for="email">Official Business Email</label>
+                    <input type="email" id="email" name="email" required placeholder="buyer@company.com">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="fi_sender_email" class="form-control" placeholder="name@company.com" required>
+                    <label for="product">Target Product Category</label>
+                    <select id="product" name="product" required>
+                        <option value="Turmeric / Spices">Turmeric & Whole Spices</option>
+                        <option value="Dehydrated Vegetables">Dehydrated Garlic/Onion</option>
+                        <option value="Areca Leaf Dinnerware">Areca Palm Leaf Plates</option>
+                        <option value="Herbal Powders">Organic Henna & Herbal Powders</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="fi_text_phone" class="form-control" placeholder="Your Phone Number" required>
+                    <label for="message">Order Specifications & Target Destination</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Specify quantity, packaging preference, target port, and delivery timeline..."></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="requirements">Exim/Logistics Requirements</label>
-                    <textarea id="requirements" name="fi_text_message" class="form-control" rows="4" placeholder="Briefly describe your import, export, or customs clearance requirements..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit Enquiry</button>
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Submit Trade Request</button>
             </form>
         </div>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2026 LPGSV EXIM. All rights reserved.</p>
+        <p>&copy; 2026 LPGSV EXIM. All Rights Reserved. | Vadodara, Gujarat, India</p>
     </footer>
 
 </body>
